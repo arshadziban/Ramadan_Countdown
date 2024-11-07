@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramadan Countdown</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Background pattern, you can replace this with your custom image */
+    body {
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen text-center text-white bg-gray-900 bg-opacity-90">
+
+  <!-- Calligraphy and Title -->
+  <div class="mb-8">
+    <!-- Use an image here instead of text -->
+    <img src="caliography.png" alt="رمضان" class="mx-auto h-52 w-auto mb-2">
+    <p class="text-lg tracking-widest">RAMADAN</p>
+  </div>
+  
+
+  <!-- Countdown -->
+  <div id="countdown" class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+    <span id="days">00</span> D
+    <span id="hours">00</span> H
+    <span id="minutes">00</span> M
+    <span id="seconds">00</span> S
+  </div>
+
+<!-- Dua Text -->
+<p class="mt-4 text-lg md:text-xl" style="font-family: 'Noto Sans Arabic', sans-serif;">
+    اللّهُمَّ بَلِّغْنَا رَمَضَان
+</p>
+<p class="text-sm opacity-100">Oh Allah, let us reach the month of Ramadan.</p>
+
+  <script>
+    // Countdown Timer Script
+    const countdownDate = new Date("February 28, 2025 18:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    };
+
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
