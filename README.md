@@ -3,7 +3,7 @@
 Ramadan Countdown website built with **HTML** and **Tailwind CSS**. This project features a live countdown timer to the start of **Ramadan**, styled with a custom background and Arabic calligraphy.
 
 ## Features
-- 🕰️ **Live Countdown Timer** to Ramadan 2025
+- 🕰️ **Live Countdown Timer** to Ramadan 2026
 - 🎨 **Custom Background & Styling** using Tailwind CSS
 - 🕌 **Arabic Calligraphy** for an elegant design
 
