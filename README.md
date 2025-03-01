@@ -12,3 +12,5 @@ Below is a preview of the UI design:
 
 ![Ramadan Countdown UI](UI%20Design/Ramadan%20countdown.jpg)
 
+## Live Demo
+Check out the live version of the project here: [Ramadan Countdown](https://arshadziban.github.io/Ramadan_Countdown/)
